@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <script>
+        $(document).ready(function() {
+
+  $('#first_form').submit(function(e) {
+    e.preventDefault();
+    var country_name = $('#country_name').val();
+    var school_name = $('#school_name').val();
+    
+
+    $(".error").remove();
+
+    if (country_name.length < 1) {
+      $('#country_name').after('<span class="error" style="color:red;">This field is required</span>');
+    }
+    if (school_name.length < 1) {
+      $('#school_name').after('<span class="error">This field is required</span>');
+    }
+    if (age < 1) {
+      $('#age').after('<span class="error">This field is required</span>');
+   
+  });
+
+});
+
+
+                        
+        
+        </script>
+          <style>
+            
+
+form label {
+  display: inline-block;
+  width: 150px;
+}
+ 
+form div {
+  margin-bottom: 10px;
+}
+ 
+.error {
+  color: red;
+  margin-left: 5px;
+}
+ 
+label.error {
+  display: inline;
+}
+      </style>
+
+    </head>
+    
+    <body>
+      <h2>Project 7:</h2>
+<form id="first_form" method="post" action="">
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name"></input>
+  </div>
+  <div>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"></input>
+  </div>
+   
+  <div>
+     <input type="submit" id="submit" class="btn btn-success" value="Search" />
+  </div>
+</form>
+        <div class="container">
+                <div class='row'>
+                    <div class='col-lg-12'>
+                
+                    
+                            
+                    </div>
+                
+        
+            </div>
+        </div>  
+    </body>
+    
+</html>
+

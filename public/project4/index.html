@@ -1,0 +1,93 @@
+<html >
+  <head>
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+        
+        $("#submit").click(function(e){
+    e.preventDefault();
+    num1 = $('#number1').val();                 
+    num2 = $('#number2').val();
+           if (num1.length < 1) {
+      $('#nunber1').after('<span class="error" style= "color:red;">This field is required</span>');
+    }
+    if (num2.length < 1) {
+      $('#nunber2').after('<span class="error">This field is required</span>');
+    }
+    if ($('#add').prop('checked')){
+        $('#answer').html(parseInt(num1)+parseInt(num2));
+      
+    }
+     if ($('#subtract').prop('checked')){
+        $('#answer').html(parseInt(num1)-parseInt(num2));
+    }
+       
+         if ($('#multiply').prop('checked')){
+        $('#answer').html(parseInt(num1)*parseInt(num2));
+     }
+           
+             if ($('#divide').prop('checked')){
+        $('#answer').html(parseInt(num1)/parseInt(num2));
+      
+    }
+
+});
+      });
+        
+        
+		
+
+			
+		</script>
+
+
+  </head> 
+    <body>
+     <div class= "container">
+        <div class= "row">
+          <div class="col-lg-12">
+         <form>
+  <div class="form-group">
+    <label for="nunber1">Number 1</label>
+    <input type="text" class="form-control" id="number1" aria-describedby="number1" placeholder="Enter number1">
+    
+  </div>
+  <div class="form-group">
+    <label for="number2">Number 2</label>
+    <input type="text" class="form-control" id="number2" placeholder="number2">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="add">
+    <label class="form-check-label" for="add">Add</label>
+  </div>
+           <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="multiply">
+    <label class="form-check-label" for="add">Multiply</label>
+  </div>
+           <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="subtract">
+    <label class="form-check-label" for="add">Subtract</label>
+             <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="divide">
+    <label class="form-check-label" for="add">Divide</label>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary" id= submit>Submit</button>
+</form>   
+           <div id="answer" "style color:green;">
+                                              </div> 
+                                              
+         
+          
+       </div>
+      </div> 
+     </body>
+  </html>.

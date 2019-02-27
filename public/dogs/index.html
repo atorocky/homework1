@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+           $.getJSON("https://aws.random.cat/meow").done(function(data){
+    
+                 $('#cat').html("<img style='width:200px;' src="+data.file+" alt='cat' >")
+    
+           });
+              
+           $.getJSON("https://random.dog/woof.json").done(function(data){
+    
+                 $('#dog').html("<img style='width:200px;' src="+data.url+" alt='dog' >")
+    
+           });
+
+                  $.getJSON("https://randomfox.ca/floof").done(function(data){
+    
+                 $('#fox').html("<img style='width:200px;' src="+data.image+" alt='fox' >")
+    
+           });
+              
+            });
+            
+        </script>
+        <style>
+            
+                form label {
+                    display: inline-block;
+                    width: 200px;
+                }
+
+                form div {
+                    margin-bottom: 10px;
+                }
+
+                .error {
+                    color: red;
+                    margin-left: 5px;
+                }
+
+                label.error {
+                    display: inline;
+                }
+                
+        </style>
+
+    </head>
+    
+    <body>
+        <div class="container">
+                <div class='row'>
+                    <div class='col-lg-12'>
+                    <table class='table table-bordered table-striped table-hover' style="margin-top:20px;">
+                        <tr><th>Animal</th><th></th></tr>
+                        <tr><td>Fox</td><td id="fox">ggggg</td></tr>
+                        <tr><td>Dog</td><td id="dog"></td></tr>
+                        <tr><td>Cat</td><td id="cat"></td></tr>
+  <!-- <tr class="job">
+				<td class="title">
+					<h4><a href="https://jobs.github.com/positions/b56042da-5bd5-4bf7-b1aa-058fe0020786">Lead Software Engineer</a></h4>
+					<p class="source">
+						<a class="company" href="https://jobs.github.com/companies/fuigo">Fuigo</a>
+						–
+            <strong class="fulltime">Full Time</strong></p>
+				</td>
+
+				<td class="meta">
+          <span class="location">New York, NY</span>
+          <span class="when relatize relatized">12 days ago</span>
+				</td>
+			</tr>  -->
+                    </table>
+                            
+                    </div>
+                
+        
+            </div>
+        <div class='row'>
+            <h2 id="total_cnt"></h2>
+            <div class='col-lg-12' id="resultsTable">
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    
+    
+        </div>  
+
+    </body>
+    
+</html><
